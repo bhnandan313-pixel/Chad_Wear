@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F7F7F5;
+    --bg-product: #F3F3F1;
+    --bg-card: #F3F3F1;
+    --bg-surface-elevated: #EDEDEB;
+    --text-primary: #111111;
+    --text-secondary: #707070;
+    --text-muted: #999999;
+    --border-color: #E5E5E5;
+    --border-light: #D5D5D5;
+    --accent: #111111;
+    --btn-primary-bg: #111111;
+    --btn-primary-text: #FFFFFF;
+    --btn-primary-hover: #262626;
+    --btn-secondary-bg: #FFFFFF;
+    --btn-secondary-border: #E5E5E5;
+    --btn-secondary-text: #111111;
+    --nav-bg: rgba(255, 255, 255, 0.96);
+    --announcement-bg: #F7F7F5;
+    --footer-bg: #F7F7F5;
+    --input-bg: #FFFFFF;
+    --selection-bg: #111111;
+    --selection-text: #FFFFFF;
+    --scrollbar-track: #FFFFFF;
+    --scrollbar-thumb: #D5D5D5;
+    --scrollbar-thumb-hover: #B5B5B5;
+    --text-stroke-color: rgba(17, 17, 17, 0.2);
+    --text-stroke-hover-color: #111111;
+    color-scheme: light;
+  }
+
+  html {
+    background-color: #FFFFFF;
+    color: #111111;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #111111;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Selection styling */
+  ::selection {
+    background-color: #111111;
+    color: #FFFFFF;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FFFFFF;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D5D5D5;
+    border-radius: 0px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B5B5B5;
+  }
+}
+
+/* Streetwear editorial typography & styling utilities */
+.font-heading {
+  font-family: 'Bebas Neue', 'Oswald', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.font-editorial {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(17, 17, 17, 0.2);
+  color: transparent;
+}
+
+.text-stroke-hover:hover {
+  -webkit-text-stroke: 1px #111111;
+  color: #111111;
+}
+
+/* Subtle texture overlay */
+.editorial-grain {
+  background-image: radial-gradient(rgba(17, 17, 17, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Image zoom & hover transitions */
+.img-editorial {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+}
+
+.group:hover .img-editorial {
+  transform: scale(1.05);
+}
